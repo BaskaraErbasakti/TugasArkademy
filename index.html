@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="Favicon/favicon.ico">
+    <title> Sakti Cafe</title>
+  </head>
+  <body>
+    <div id="parent" class="container-fluid">
+      <div class="row sticky-top bg-white">
+        <header class="col-8 d-flex justify-content-between align-items-center shadow-sm py-4 rounded">
+          <button type="button" class="btn">
+            <img class="ml-4 img-fluid" src="Gambar/menu.png" width="35px" height="35px" alt="menu-list">
+          </button>
+          <button type="button" class="btn m-0" data-toggle="collapse" href="#empty">
+            <h1 class="tittle">Food Items</h1>
+          </button>
+          <div class="dropleft">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="mr-4 img-fluid" src="gambar/magnifying-glass.png" width="35px" height="35px" alt="magnifying-glass">
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Searching" aria-label="Searching" aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="col-4 d-flex justify-content-center align-items-center shadow-sm py-4">
+          <h1 class="m-0">Cart</h1>
+          <h1 id="number" class="px-2 mx-2 my-0">0</h1>
+        </div>
+      </div>
+      <div class="row d-flex flex-wrap">
+        <div class="d-none d-sm-block col-1 shadow-sm">
+          <aside class="d-flex flex-column justify-content-start align-items-center py-4">
+            <img class="py-4" src="gambar/fork.png" alt="fork">
+            <a href="file:///E:/Arkademy/history.html">
+              <img class="py-4" src="gambar/clipboard.png" alt="clipboard">
+            </a> 
+            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><img class="py-4" src="gambar/add.png" alt="add"></button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Item</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                          <input type="Name" class="form-control shadow-sm rounded" id="inputName">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputImage" class="col-sm-2 col-form-label">Image</label>
+                        <div class="col-sm-10">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputPrice" class="col-sm-2 col-form-label">Price</label>
+                        <div class="col-sm-10">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">Rp.</div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroup" >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputCategory" class="col-sm-2 col-form-label">Category</label>
+                        <div class="col-sm-5">
+                          <select id="inputCategory" class="form-control">
+                            <option selected>Category...</option>
+                            <option>Appetizer</option>
+                            <option>Main Course</option>
+                            <option>Dessert</option>
+                            <option>Drink</option>
+                          </select>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn text-white" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn bg-info text-white">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside> 
+        </div>
+        <main class="col-7 d-flex justify-content-center align-items-baseline flex-wrap py-4">
+          <div class="col">
+            <img class="btn p-0" data-toggle="collapse" href="#cart1" role="button" aria-expanded="false" aria-controls="cart1" src="gambar/jeremy-ricketts-6ZnhM-xBpos-unsplash.png" width="250px" height="200px" alt="espresso">
+            <h2 class="font-weight-normal">Espresso</h2>
+            <h2>Rp. 10.000</h2>
+          </div>
+          <div class="col">
+            <button type="button" class="cart2 btn p-0" data-toggle="collapse" data-target=".multi-collapse" role="button" aria-expanded="false" aria-controls="cart2 total" >
+              <img src="gambar/bear.png" width="250px" height="200px" alt="cofee latte">
+            </button>
+            <h2 class="font-weight-normal">Cofee Latte</h2>
+            <h2>Rp. 15.000</h2>
+          </div>
+          <div class="col">
+            <img class="btn p-0" data-toggle="collapse" href="#cart3" role="button" aria-expanded="false" aria-controls="cart3" src="gambar/firdaus-roslan-pN769u0KHNA-unsplash.png" width="250px" height="200px" alt="Cappucino">
+            <h2 class="font-weight-normal">Cappucino</h2>
+            <h2>Rp. 5.000</h2>
+          </div>
+          <div class="col">
+            <img src="gambar/redvelvet.png" width="250px" height="200px" alt="Red Velvet">
+            <h2 class="font-weight-normal">Red Velvet Latte</h2>
+            <h2>Rp. 33.000</h2>
+          </div>
+          <div class="col">
+            <img src="gambar/chocorum.png" width="250px" height="200px" alt="Choco Rhum">
+            <h2 class="font-weight-normal">Choco Rhum</h2>
+            <h2>Rp. 28.000</h2>
+          </div>
+          <div class="col">
+            <button type="button" class="cart6 btn p-0" data-toggle="collapse" href="#cart6" role="button" aria-expanded="false" aria-controls="cart6" >
+              <img src="gambar/blackforest.png" width="250px" height="200px" alt="Black Forest">
+            </button>
+            <h2 class="font-weight-normal">Black Forest</h2>
+            <h2>Rp. 30.000</h2>
+          </div>
+          <div class="col">
+            <img src="gambar/chickenkatsu.png" width="250px" height="200px" alt="Chicken Katsu">
+            <h2 class="font-weight-normal">Chicken Katsu Dabu-dabu</h2>
+            <h2>Rp. 60.000</h2>
+          </div>
+          <div class="col">
+            <button type="button" class="cart8 btn p-0" data-toggle="collapse" href="#cart8" role="button" aria-expanded="false" aria-controls="cart8" >
+              <img src="gambar/salmon.png" width="250px" height="200px" alt="Salmon">
+            </button>
+            <h2 class="font-weight-normal">Salmon Truffle Teriyaki</h2>
+            <h2>Rp. 60.000</h2>
+          </div>
+          <div class="col">
+            <img src="gambar/wiener.png" width="250px" height="200px" alt="Wiener">
+            <h2 class="font-weight-normal">Wiener Schnitzel</h2>
+            <h2>Rp. 69.000</h2>
+          </div>
+        </main>
+        <div class="d-none d-sm-block col-4 border">
+          <section id="sum-cart" class="d-flex flex-column justify-content-between align-items-center p-0 height">
+            <div class="col d-flex flex-column justify-content-start align-items-center">
+              <div id="empty" class="collapse show" data-parent="#parent">
+                <div class="d-flex flex-column justify-content-start align-items-center pt-5">
+                  <img id="cup" class="img-fluid" src="gambar/food-and-restaurant.png" alt="food-and-restaurant">
+                  <h2 class="font-25">Your cart is empty</h2>
+                  <h2 class="font-weight-normal some">Please add some items from the menu</h2>
+                </div>
+              </div>
+              <div id="cart1" class="collapse">
+                <div class="d-flex my-3 py-2">
+                  <div class="d-flex">
+                    <img src="gambar/jeremy-ricketts-6ZnhM-xBpos-unsplash.png" alt="Coffee Latte" width="100px" height="100px">
+                  </div>
+                  <div class="d-flex flex-column align-items-start justify-content-between mx-4">
+                    <h1>Espresso</h1>
+                    <div class="d-flex">
+                      <h2 class="added">-</h2>
+                      <h2 class="numb d-flex align-items-center justify-content-center">1</h2>
+                      <h2 class="added mr-4">+</h2>
+                      <h1 class="ml-4 my-0 d-flex align-items-end justify-content-end">Rp. 10.000</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="cart2" class="collapse multi-collapse" data-parent="#parent">
+                <div class="d-flex my-3 py-2">
+                  <div class="d-flex">
+                    <img src="gambar/bear.png" alt="Coffee Latte" width="100px" height="100px">
+                  </div>
+                  <div class="d-flex flex-column align-items-start justify-content-between mx-4">
+                    <h1>Coffee Latte</h1>
+                    <div class="d-flex">
+                      <h2 class="added">-</h2>
+                      <h2 class="numb d-flex align-items-center justify-content-center">1</h2>
+                      <h2 class="added mr-4">+</h2>
+                      <h1 class="ml-4 my-0 d-flex align-items-end justify-content-end">Rp. 15.000</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="cart3" class="collapse">
+                <div class="d-flex my-3 py-2">
+                  <div class="d-flex">
+                    <img src="gambar/firdaus-roslan-pN769u0KHNA-unsplash.png" alt="Coffee Latte" width="100px" height="100px">
+                  </div>
+                  <div class="d-flex flex-column align-items-start justify-content-between mx-4">
+                    <h1>Cappucino</h1>
+                    <div class="d-flex">
+                      <h2 class="added">-</h2>
+                      <h2 class="numb d-flex align-items-center justify-content-center">1</h2>
+                      <h2 class="added mr-4">+</h2>
+                      <h1 class="ml-4 my-0 d-flex align-items-end justify-content-end">Rp. 5.000</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="cart6" class="collapse">
+                <div class="d-flex my-3 py-2">
+                  <div class="d-flex">
+                    <img src="gambar/blackforest.png" alt="blackforest" width="100px" height="100px">
+                  </div>
+                  <div class="d-flex flex-column align-items-start justify-content-between mx-4">
+                    <h1>Black Forest</h1>
+                    <div class="d-flex">
+                      <h2 class="added">-</h2>
+                      <h2 class="numb d-flex align-items-center justify-content-center">1</h2>
+                      <h2 class="added mr-4">+</h2>
+                      <h1 class="ml-4 my-0 d-flex align-items-end justify-content-end">Rp. 30.000</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="cart8" class="collapse">
+                <div class="d-flex my-3 py-2">
+                  <div class="d-flex">
+                    <img src="gambar/salmon.png" alt="salmon" width="100px" height="100px">
+                  </div>
+                  <div class="d-flex flex-column align-items-start justify-content-between mx-4">
+                    <h1>Salmon Truffle Teriyaki</h1>
+                    <div class="d-flex">
+                      <h2 class="added">-</h2>
+                      <h2 class="numb d-flex align-items-center justify-content-center">1</h2>
+                      <h2 class="added mr-4">+</h2>
+                      <h1 class="ml-4 my-0 d-flex align-items-end justify-content-end">Rp. 60.000</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="total" class="collapse multi-collapse">
+              <div class="total col d-inline-flex flex-column justify-content-end p-0">
+                <div class="row d-flex ml-0 justify-content-between">
+                  <div class="col p-0">
+                    <h1>Total :</h1>
+                  </div>
+                  <div class="col text-right">
+                    <h1 id="total-price1">Rp. 15.000</h1>
+                  </div>
+                </div>
+                <div class="row ml-0">
+                  <h3 class="font-weight-light">*Belum termasuk ppn</h3>
+                </div>
+                <div id="checkout" class="row ml-0 d-flex justify-content-center align-items-center py-2 my-2 mx-0 text-white btn bg-info" data-toggle="modal" data-target="#pay">
+                  <h1>Checkout</h1>
+                </div>
+                <div class="row ml-0 d-flex justify-content-center align-items-center py-2 my-2 mx-0 text-white btn">
+                  <h1>Cancel</h1>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="modal fade" id="pay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content d-flex flex-column py-2">
+                <div class="row mx-0 mb-4">
+                  <div class="col">
+                    <h1 class="font-25">Checkout</h1>
+                    <h3 class="font-15">Cashier : Mas Sakti</h3>
+                  </div>
+                  <div class="col pr-2">
+                    <h1 class="font-20">Receipt no: #010410919</h1>
+                  </div>
+                </div>
+                <div class="row mx-0">
+                  <div class="col-8 pl-2 pr-0">
+                    <h2 class="font-20 my-4">Coffee Latte 1x</h2>
+                    <h2 class="font-20 my-4">Black Forest 1x</h2>
+                    <h2 class="font-20 my-4">Salmon Truffle Teriyaki 1x</h2>
+                    <h2 class="font-20 my-4">Ppn 10%</h2>
+                  </div>
+                  <div class="col px-15">
+                    <h2 class="font-20 my-4">Rp. 15.000</h2>
+                    <h2 class="font-20 my-4">Rp. 30.000</h2>
+                    <h2 class="font-20 my-4">Rp. 60.000</h2>
+                    <h2 class="font-20 my-4">Rp. 10.500</h2>
+                  </div>
+                </div>
+                <div class="row mx-0">
+                  <div class="col-8 text-right">
+                    <h2 class="font-20">Total :</h2>
+                  </div>
+                  <div class="col">
+                    <h2 class="font-20">Rp. 115.500</h2>
+                  </div>
+                </div>
+                <div class="row mx-0 pl-2 my-4">
+                  <h2 class="font-20">Payment: Cash</h2>
+                </div>
+                <div class="row mx-2 py-2 justify-content-center align-items-center pink text-white rounded align-middle btn">
+                  <h1 class="font-25">Print</h1>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                  <h1 class="font-25">Or</h1>
+                </div>
+                <div class="row mx-2 py-2 justify-content-center align-items-center bg-info text-white rounded align-middle btn">
+                  <h1 class="font-25">Send Email</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
